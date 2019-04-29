@@ -1,0 +1,13 @@
+package com.example.DAO;
+
+public class LessonDAO {
+
+	
+	
+	public List<Lesson> getLessons() {
+		
+		return null;
+	}
+	
+
+}

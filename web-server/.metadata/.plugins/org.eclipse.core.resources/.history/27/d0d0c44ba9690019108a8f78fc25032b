@@ -1,0 +1,34 @@
+package com.example.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "lesson")
+public class Lesson {
+
+	private int ID;
+	private String lessonName;
+
+	@Id
+	@Column(name = "ID", nullable = false)
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	@Column(name = "lessonname", nullable = false)
+	public String getLessonName() {
+		return lessonName;
+	}
+
+	public void setLessonName(String lessonName) {
+		this.lessonName = lessonName;
+	}
+
+}

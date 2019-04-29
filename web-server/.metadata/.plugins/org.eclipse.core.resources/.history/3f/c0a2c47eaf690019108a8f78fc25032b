@@ -1,0 +1,8 @@
+package com.example.model;
+
+public class Lesson {
+
+	private int ID;
+	private String lessonName;
+
+}

@@ -1,0 +1,22 @@
+package com.example;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.DAO.LessonDAO;
+import com.example.entities.Lesson;
+
+public class GetData {
+
+	@Autowired
+	private LessonDAO lessonDAO;
+	public void main(String[] args) {
+		
+		List<Lesson> listLesson = lessonDAO.
+		
+		
+
+	}
+
+}

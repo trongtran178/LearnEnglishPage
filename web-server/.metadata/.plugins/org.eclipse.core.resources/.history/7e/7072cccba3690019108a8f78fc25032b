@@ -1,0 +1,22 @@
+package com.example.DAO;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.entities.Lesson;
+
+@Repository
+public class LessonDAO {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public List<Lesson> getLessons() {
+		
+	}
+	
+
+}

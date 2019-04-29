@@ -1,0 +1,14 @@
+package com.example.model;
+
+public class Lesson {
+	
+	private int ID;
+	private String lessonName;
+
+	public Lesson(int iD, String lessonName) {
+		super();
+		ID = iD;
+		this.lessonName = lessonName;
+	}
+
+}
