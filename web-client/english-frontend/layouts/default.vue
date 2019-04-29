@@ -1,5 +1,5 @@
 <template>
-  <v-app dark >
+  <v-app style="background-image: url(https://cdn.vuetifyjs.com/images/cards/docks.jpg)">
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"

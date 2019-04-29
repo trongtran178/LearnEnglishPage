@@ -1,0 +1,34 @@
+package com.example.DAO;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.entities.Lesson;
+
+@Transactional
+@Repository
+public class LessonDAO {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public List<Lesson> getLessons() {
+		
+		String sql = "Select new " + Lesson.class.getName() 
+					+ "lesson.ID, lesson.LessonName "
+					+ "from " + Lesson.class.getName() + " lesson ";
+		
+		Session session = sessionFactory.getCurrentSession();
+		Query<Lesson> query = session.createQuery(sql, Lesson.class);
+		return query.getResultList();
+		//return (List<Lesson>) session.createQuery(sql, Lesson.class);
+	}
+	
+
+}

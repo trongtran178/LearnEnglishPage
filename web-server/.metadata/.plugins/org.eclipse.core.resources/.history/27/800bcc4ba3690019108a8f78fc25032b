@@ -1,0 +1,13 @@
+package com.example.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Lesson")
+public class Lesson {
+
+	private int ID;
+	private String lessonName;
+
+}
