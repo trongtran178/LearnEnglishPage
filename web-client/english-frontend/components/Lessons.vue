@@ -18,13 +18,14 @@
 
       <v-layout row wrap>
         <template v-for="lesson in Lessons">
-          <v-flex xs6 sm4 md4>
-
-            <v-card max-height="250px" class="ma-2">
+          <v-flex  xs6 sm4 md4>
+            <v-hover>
+            <v-card slot-scope="{ hover }" @click="showVocabularyInLesson(lesson.id)" max-height="250px" :class="`elevation-${hover ? 12 : 2} ma-2`">
               <div class="text-xs-center">
                 <v-progress-circular class="mt-2" :width="5" :rotate="-90" color="deep-orange lighten-2" :size="145" :value="getValueHasLearnedInLesson()">
                   <v-avatar size="130px" >
-                    <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
+                    <v-img src="https://demo.cloudimg.io/width/600/n/https://scaleflex.ultrafast.io/https://jolipage.airstore.io/img.jpg
+                    "></v-img>
                   </v-avatar>
                 </v-progress-circular>
               </div>
@@ -32,7 +33,7 @@
                 <v-checkbox disabled color="blue" :label="`Lesson ${lesson.id}: ${lesson.lessonName}`"></v-checkbox>
               </v-container>
             </v-card>
-
+        </v-hover>
           </v-flex>
         </template>
       </v-layout>
@@ -58,6 +59,9 @@
     methods: {
       getValueHasLearnedInLesson() {
         return 80;
+      },
+      showVocabularyInLesson(lessonID) {
+          console.log(lessonID);
       }
     },
 
