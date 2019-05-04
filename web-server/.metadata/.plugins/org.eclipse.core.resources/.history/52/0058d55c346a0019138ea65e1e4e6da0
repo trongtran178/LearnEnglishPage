@@ -1,0 +1,10 @@
+package com.example.model;
+
+public class Vocabulary {
+	private int ID;
+	private int lessonID;
+	private String word;
+	private String translate;
+	private String sound;
+	private String pronunciation;
+}

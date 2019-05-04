@@ -4,9 +4,9 @@
       <left-page></left-page>
     </v-flex>
     <v-flex xs11 sm8 md8>
-      <!-- <lessons></lessons> -->
+      <lessons></lessons>
       <!-- VocabulariesInLesson -->
-      <vocabularies-in-lesson></vocabularies-in-lesson>
+      <!-- <vocabularies-in-lesson></vocabularies-in-lesson> -->
     </v-flex>
     <v-flex xs1 sm2 md2>
       <right-page></right-page>
