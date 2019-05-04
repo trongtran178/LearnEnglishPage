@@ -4245,3 +4245,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-05-04 10:57:43,914 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-05-04 10:57:43,918 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-05-04 10:57:43,918 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\NAM 3\THIET KE PHAN MEM GIAO DUC\HocTiengAnh\LearnEnglishPage\web-server\english-backend\src\test\resources
+2019-05-04 11:35:37,925 [Worker-0: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
