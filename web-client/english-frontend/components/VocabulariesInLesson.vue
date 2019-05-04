@@ -20,16 +20,16 @@
 
             </div>
             <v-card-text>
-                circle
+              circle
             </v-card-text>
           </v-card>
           <div class="headline font-weight-thin" font-weight="10">
-                Ấn [dấu cách] để lật card
+            Ấn [dấu cách] để lật card
           </div>
           <div>
-              <v-btn round>
-                  TIẾP TỤC
-              </v-btn>
+            <v-btn round>
+              TIẾP TỤC
+            </v-btn>
           </div>
         </div>
 
@@ -48,6 +48,35 @@
 </template>
 
 <script>
+  import axios from 'axios'
+  export default {
+    data: function () {
+      return {
+        lessonID: null
+      }
+    },
+
+    computed: {
+      vocabulariesInLesson: {
+        get() {
+          return this.$store.state.englishpage.ListVocabularyInLesson;
+        },
+        set(value) {
+          this.$store.commit('englishpage/setListVocabularyInLesson', value);
+        }
+      }
+    },
+
+    mounted() {
+      this.lessonID = this.$route.query.id;
+      console.log(this.lessonID)
+      axios.get(`http://localhost:8080/vocabularies/` + this.lessonID)
+        .then(response => {
+          this.vocabulariesInLesson = response.data;
+          console.log(this.vocabulariesInLesson);
+        })
+    }
+  }
 
 </script>
 
