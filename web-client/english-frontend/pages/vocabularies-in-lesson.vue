@@ -4,8 +4,6 @@
       <left-page></left-page>
     </v-flex>
     <v-flex xs11 sm8 md8>
-      <!-- <lessons></lessons> -->
-      <!-- VocabulariesInLesson -->
       <vocabularies-in-lesson></vocabularies-in-lesson>
     </v-flex>
     <v-flex xs1 sm2 md2>
@@ -29,7 +27,7 @@
 
     data: function () {
       return {
-        lessonID: null
+
       }
     },
 
@@ -38,14 +36,14 @@
       VocabulariesInLesson,
       RightPage
     },
-    mounted() {
-      this.lessonID = this.$route.query.id;
-      console.log(this.lessonID)
-      axios.get(`http://localhost:8080/vocabularies/` + this.lessonID)
-        .then(response => {
-          console.log(response.data);
-        })
-    }
+    // mounted() {
+    //   this.lessonID = this.$route.query.id;
+    //   console.log(this.lessonID)
+    //   axios.get(`http://localhost:8080/vocabularies/` + this.lessonID)
+    //     .then(response => {
+    //       console.log(response.data);
+    //     })
+    // }
   }
 
 </script>
