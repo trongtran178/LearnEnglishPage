@@ -1,0 +1,18 @@
+package com.example.DAO.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.example.model.Vocabulary;
+
+public class VocabularyMap implements RowMapper<Vocabulary> {
+
+	@Override
+	public Vocabulary mapRow(ResultSet rs, int rowNum) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

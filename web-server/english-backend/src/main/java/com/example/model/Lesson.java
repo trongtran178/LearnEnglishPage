@@ -4,11 +4,13 @@ public class Lesson {
 
 	private int ID;
 	private String lessonName;
+	private String avatar;
 
-	public Lesson(int iD, String lessonName) {
+	public Lesson(int iD, String lessonName, String avatar) {
 		super();
 		ID = iD;
 		this.lessonName = lessonName;
+		this.avatar = avatar;
 	}
 
 	public int getID() {
@@ -25,6 +27,14 @@ public class Lesson {
 
 	public void setLessonName(String lessonName) {
 		this.lessonName = lessonName;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
 	}
 
 }

@@ -9,14 +9,15 @@ import com.example.model.Lesson;
 
 public class LessonMapper implements RowMapper<Lesson> {
 
-	public static final String BASE_SQL = "Select lesson.ID, lesson.lessonName from Lesson lesson";
+	public static final String BASE_SQL = "Select lesson.ID, lesson.lessonName, lesson.avatar from Lesson lesson";
 
 	@Override
 	public Lesson mapRow(ResultSet rs, int rowNum) throws SQLException {
 		int id = rs.getInt("ID");
 		String lessonName = rs.getString("lessonName");
-
-		return new Lesson(id, lessonName);
+		String avatar = rs.getString("avatar");
+		
+		return new Lesson(id, lessonName, avatar);
 	}
 
 }
